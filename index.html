@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jollibee - Home of the Langhap-Sarap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="https://mma.prnewswire.com/media/1815050/Jollibee_Logo__Horizontal__ID_a6652feaf0c8_Logo.jpg?p=facebook" alt="Jollibee Logo" class="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#locations" class="nav-link">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Bida ang Saya!</h1>
+                <p class="hero-subtitle">Experience the joy of Langhap-Sarap with our world-famous fried chicken and Filipino favorites</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('menu')">Order Now</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://static.wikia.nocookie.net/jollitown/images/3/3d/Jollibee2D.png/revision/latest/scale-to-width-down/250?cb=20240801072659" alt="Jollibee Mascot" class="mascot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Items -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Items</h2>
+            <div class="featured-grid">
+                <div class="featured-card" data-aos="fade-up">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Chickenjoy" class="featured-image">
+                    <h3>Chickenjoy</h3>
+                    <p>Our world-famous fried chicken that's crispy outside, juicy inside</p>
+                    <span class="price">₱89</span>
+                </div>
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Jolly Spaghetti" class="featured-image">
+                    <h3>Jolly Spaghetti</h3>
+                    <p>Sweet-style spaghetti with hotdog slices and cheese</p>
+                    <span class="price">₱65</span>
+                </div>
+                <div class="featured-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/placeholder.svg?height=200&width=300" alt="Yumburger" class="featured-image">
+                    <h3>Yumburger</h3>
+                    <p>Juicy beef patty with our special dressing</p>
+                    <span class="price">₱45</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="showMenu('chicken')">Chicken</button>
+                <button class="tab-btn" onclick="showMenu('burgers')">Burgers</button>
+                <button class="tab-btn" onclick="showMenu('pasta')">Pasta & Rice</button>
+                <button class="tab-btn" onclick="showMenu('desserts')">Desserts</button>
+            </div>
+            
+            <div id="chicken" class="menu-content active">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="1-pc Chickenjoy">
+                        <h4>1-pc Chickenjoy</h4>
+                        <p>1 piece of our famous fried chicken</p>
+                        <span class="price">₱89</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="2-pc Chickenjoy">
+                        <h4>2-pc Chickenjoy</h4>
+                        <p>2 pieces of our famous fried chicken</p>
+                        <span class="price">₱169</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Chicken Bucket">
+                        <h4>8-pc Chicken Bucket</h4>
+                        <p>Perfect for sharing with family</p>
+                        <span class="price">₱599</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="burgers" class="menu-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Yumburger">
+                        <h4>Yumburger</h4>
+                        <p>Classic beef burger with special sauce</p>
+                        <span class="price">₱45</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Cheeseburger">
+                        <h4>Cheeseburger</h4>
+                        <p>Yumburger with cheese</p>
+                        <span class="price">₱55</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Amazing Aloha">
+                        <h4>Amazing Aloha</h4>
+                        <p>Burger with pineapple and ham</p>
+                        <span class="price">₱129</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pasta" class="menu-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Jolly Spaghetti">
+                        <h4>Jolly Spaghetti</h4>
+                        <p>Sweet-style spaghetti with hotdog and cheese</p>
+                        <span class="price">₱65</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Palabok">
+                        <h4>Palabok Fiesta</h4>
+                        <p>Rice noodles with savory sauce and toppings</p>
+                        <span class="price">₱75</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Chicken Rice Bowl">
+                        <h4>Chicken Rice Bowl</h4>
+                        <p>Tender chicken with garlic rice</p>
+                        <span class="price">₱99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="desserts" class="menu-content">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Peach Mango Pie">
+                        <h4>Peach Mango Pie</h4>
+                        <p>Crispy pie filled with peach and mango</p>
+                        <span class="price">₱35</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Sundae">
+                        <h4>Chocolate Sundae</h4>
+                        <p>Creamy vanilla ice cream with chocolate syrup</p>
+                        <span class="price">₱25</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=200" alt="Halo-Halo">
+                        <h4>Crema de Leche Halo-Halo</h4>
+                        <p>Filipino shaved ice dessert</p>
+                        <span class="price">₱89</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Jollibee</h2>
+                    <p>Since 1978, Jollibee has been bringing joy to families and friends with our delicious food and warm service. What started as an ice cream parlor has grown into the Philippines' largest fast food chain, known worldwide for our signature Chickenjoy and sweet-style spaghetti.</p>
+                    <p>Our mission is simple: to serve great-tasting food that brings joy to everyone. We're not just about the food – we're about creating moments of happiness and togetherness.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>1,500+</h3>
+                            <p>Stores Worldwide</p>
+                        </div>
+                        <div class="stat">
+                            <h3>45+</h3>
+                            <p>Years of Service</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Jollibee Family" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="locations">
+        <div class="container">
+            <h2 class="section-title">Find Us Near You</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>SM Mall of Asia</h4>
+                    <p>Ground Floor, SM Mall of Asia, Pasay City</p>
+                    <p class="hours">Open 24/7</p>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Greenbelt 3</h4>
+                    <p>2nd Floor, Greenbelt 3, Makati City</p>
+                    <p class="hours">10:00 AM - 10:00 PM</p>
+                </div>
+                <div class="location-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>UP Town Center</h4>
+                    <p>Ground Floor, UP Town Center, Quezon City</p>
+                    <p class="hours">10:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+            <div class="store-locator">
+                <button class="btn btn-primary">Find More Stores</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>8-7000 (Metro Manila)</p>
+                            <p>1-800-1-JOLLIBEE (US & Canada)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>customercare@jollibee.com.ph</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Customer Service Hours</h4>
+                            <p>Monday - Sunday: 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="/placeholder.svg?height=40&width=100" alt="Jollibee Logo" class="footer-logo">
+                    <p>Bringing joy to families worldwide since 1978</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#locations">Store Locator</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Franchise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Download Our App</h4>
+                    <div class="app-links">
+                        <a href="#" class="app-link">
+                            <img src="/placeholder.svg?height=40&width=120" alt="Download on App Store">
+                        </a>
+                        <a href="#" class="app-link">
+                            <img src="/placeholder.svg?height=40&width=120" alt="Get it on Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jollibee Foods Corporation. All rights reserved. For Educational Purposes</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
