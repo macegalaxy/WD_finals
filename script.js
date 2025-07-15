@@ -103,21 +103,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add loading animation for images
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
-        // Set initial opacity
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
-    });
-});
-
 // Add hover effects for menu items
 document.querySelectorAll('.menu-item, .featured-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
